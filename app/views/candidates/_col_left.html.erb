@@ -1,0 +1,11 @@
+<div class="home-left">
+		<%if current_candidate%>
+		<div class="profile-pic">
+			<%if not current_candidate.upload.blank?%>
+				<%= image_tag(current_candidate.upload.url) %>
+				<%end%>
+				<h2><%= current_candidate.name%></h2>
+				<p><%= current_candidate.age%></p>
+		</div>
+		<%end%>
+</div>

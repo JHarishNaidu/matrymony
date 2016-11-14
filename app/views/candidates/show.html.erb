@@ -1,0 +1,80 @@
+
+<div class="container-left">
+	<div class="info">
+		<%if ! @candidate.upload.blank?%>
+		<div class="show-image">
+		<%= image_tag( @candidate.upload.url)%>
+		</div>
+		<%end%>
+		<table>
+			<tr>
+				<%if  not @candidate.name.blank? %>
+				<th>
+					Name
+				</th>
+				<%end%>
+				<%if  not @candidate.date_of_birth.blank? %>
+				<th>
+					D.O.B
+				</th>
+				<%end%>
+				<%if  not @candidate.nick_name.blank? %>
+				<th>
+					Short Name
+				</th>
+				<%end%>
+				<%if  not @candidate.age.blank? %>
+				<th>
+					Age
+				</th>
+				<%end%>
+			</tr>
+			<tr>
+
+				<%if  not @candidate.name.blank? %>
+				<td><%=  @candidate.name%></td>
+				<%end%>
+				<%if  not @candidate.date_of_birth.blank? %>
+				<td><%=  @candidate.date_of_birth %></td>
+				<%end%>
+				<%if  not @candidate.nick_name.blank? %>
+				<td><%=  @candidate.nick_name%></td>
+				<%end%>
+				<%if  not @candidate.age.blank? %>
+				<td><%=  @candidate.age%></td>
+				<%end%>
+			</tr>
+			<tr>
+				<%if  not @candidate.sex.blank? %>
+				<th>Sex </th>
+				<%end%>
+				<%if  not @candidate.father.blank? %>
+				<th>Father Name</th>
+				<%end%>
+				<%if  not @candidate.mother.blank? %>
+				<th>Mother Name</th>
+				<%end%>
+				<%if  not @candidate.brother.blank? %>
+				<th>Brother Name</th>
+				<%end%>
+			</tr>
+			<tr>
+				<%if  not @candidate.sex.blank? %>
+				<td><%=  @candidate.sex%></td>
+				<%end%>
+				<%if  not @candidate.father.blank? %>
+				<td><%=  @candidate.father%></td>
+				<%end%>
+				<%if  not @candidate.mother.blank? %>
+				<td><%=  @candidate.mother%></td>
+				<%end%>
+				<%if  not @candidate.brother.blank? %>
+				<td><%=  @candidate.brother%></td>
+				<%end%>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="container-right">
+	<h2><%= link_to "Edit", edit_candiadte_path(@candidate)%></h2>
+</div>

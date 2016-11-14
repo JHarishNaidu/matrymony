@@ -1,0 +1,68 @@
+<div class="container-left">
+<%= form_for @candidate , html: { multipart: true } do |candi|%>
+	<div class="personal-info">
+		<p>Please fill the mandatory fields :</p>
+		<div class="register">
+			<p><%= label_tag "Email"%></p>
+			<%= candi.email_field :email%>
+		</div>
+		<div class="register">
+			<p><%= label_tag "Password"%></p>
+			<%= candi.password_field :password%>
+		</div>
+		<div class="register">
+			<p><%= label_tag "Confirm Password"%></p>
+			<%= candi.password_field :password_confirmation%>
+		</div>	
+		
+		<div class="register">
+			<p><%= label_tag "Name"%></p>
+			<%= candi.text_field :name%>
+		</div>
+		<div class="register">
+			<p><%= label_tag "D.O.B"%></p>
+			<%= candi.date_field :date_of_birth%>
+		</div>
+		<div class="register">
+			<p><%= label_tag "Short Name"%></p>
+			<%= candi.text_field :nick_name%>
+		</div>
+		<div class="register">	
+			<p><%= label_tag "Sex"%></p>
+			<%= candi.select("sex",options_for_select(["Male","Female"]),:include_blank => "Please select")%>
+		</div>
+		<div class="register">
+			<p><%= label_tag "Image"%></p>
+			<%= candi.file_field :upload%>
+		</div>
+
+		<div class="register">
+			<p><%= label_tag "Family Strenth"%></p>
+			<%= candi.number_field :family_members_count%>
+		</div>
+		<div class="register">
+			<p><%= label_tag "Father Name"%></p>
+			<%= candi.text_field :father%>
+		</div>
+		<div class="register">
+			<p><%= label_tag "Mother Name"%></p>
+			<%= candi.text_field :mother%>
+		</div>
+		<div class="register">
+			<p><%= label_tag "Brother Name"%></p>
+			<%= candi.text_field :brother%>
+		</div>
+		<div class="register">
+			<p><%= label_tag "Sister Name"%></p>
+			<%= candi.text_field :sister%>
+		</div>
+	</div>
+	<div class="reg-submit">
+		<p><%= candi.submit "Submit"%></p>
+	</div>
+<%end%>
+
+<%@candidate.errors.full_messages.each do |msg|%>
+<p class= "error-messages"><%= msg%></p>
+<%end%>
+</div>

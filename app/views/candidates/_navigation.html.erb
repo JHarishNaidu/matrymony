@@ -1,0 +1,28 @@
+<div class="nav">
+		<ul>
+			<li>
+				<%= link_to "Home","/"%>
+			</li>
+			<li>
+				<%= link_to "All Users",candidates_list_path%>
+			</li>
+			<li>
+				<%= link_to "Contact Us","#"%>
+			</li>
+			<% if current_candidate %>
+				<li class="right-nav">
+				Logged in <%= current_candidate.name%>
+				</li>
+				<li class="right-nav">
+				 <%= link_to "Logout",login_path%>
+				</li>
+				<%else%>
+				<li class="right-nav">
+				 <%= link_to "Login",login_path%>
+				</li>
+				<li class="right-nav">
+				 <%= link_to "Register",candidates_path%>
+				</li>
+			<%end%>
+		</ul>
+	</div>

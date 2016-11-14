@@ -1,0 +1,17 @@
+<div class="container-left">
+	<%@candidates.each do |candidate|%>
+	<div class="info">
+		<div class="about-me">
+		<h2>Name : <%= link_to(candidate.name,show_candidate_path(candidate)) if candidate.name %></h2>
+		<p>	D.O.B : <%= candidate.date_of_birth if candidate.date_of_birth%></p>
+		</div>
+		<%if !candidate.upload.blank?%>
+		<div class="image">
+		<%= image_tag(candidate.upload.url)%>
+		</div>
+		<%end%>
+	</div>
+	<%end%>
+</div>
+<div class="container-right">
+</div>

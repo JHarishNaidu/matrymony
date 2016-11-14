@@ -1,0 +1,54 @@
+<div class="container-left">
+<%= form_for :category, :url=> url_for(:controller => 'candidates',:action => 'update') , html: { multipart: true } do |candi|%>
+	<div class="personal-info">
+		<h2>Personal Details</h2>
+		<div class="person-row">
+			<h3><%= label_tag "Email"%></h3>
+			<p><%= candi.email_field :email%></p>
+			<h3><%= label_tag "Password"%></h3>
+			<p><%= candi.password_field :password%></p>
+			<h3><%= label_tag "Confirm Password"%></h3>
+			<p><%= candi.password_field :password_confirmation%></p>
+			
+		</div>
+		<div class="person-row">
+			<h3><%= label_tag "Name"%></h3>
+			<p><%= candi.text_field :name%></p>
+			<h3><%= label_tag "D.O.B"%></h3>
+			<p><%= candi.date_field :date_of_birth%></p>
+			<h3><%= label_tag "Short Name"%></h3>
+			<p><%= candi.text_field :nick_name%></p>
+		</div>
+		<div class="person-row">
+			<h3><%= label_tag "Sex"%></h3>
+			<p><%= candi.select("sex",options_for_select(["Male","Female"]),:include_blank => "Please select")%></p>
+			<h3><%= label_tag "Image"%></h3>
+			<p><%= candi.file_field :upload%></p>
+		</div>
+	</div>
+	<div class="personal-info">
+		<h2>Family Details</h2>
+		<div class="family-row">
+			<h3><%= label_tag "Family Strenth"%></h3>
+			<p><%= candi.number_field :family_members_count%></p>
+			<h3><%= label_tag "Father Name"%></h3>
+			<p><%= candi.text_field :father%></p>
+			<h3><%= label_tag "Mother Name"%></h3>
+			<p><%= candi.text_field :mother%></p>
+		</div>
+		<div class="family-row">
+			<h3><%= label_tag "Brother Name"%></h3>
+			<p><%= candi.text_field :brother%></p>
+			<h3><%= label_tag "Sister Name"%></h3>
+			<p><%= candi.text_field :sister%></p>
+		</div>
+	</div>
+	<div class="personal-info">
+		<p class="submit"><%= candi.submit "Submit"%></p>
+	</div>
+<%end%>
+
+<%@candidate.errors.full_messages.each do |msg|%>
+<p class= "error-messages"><%= msg%></p>
+<%end%>
+</div>

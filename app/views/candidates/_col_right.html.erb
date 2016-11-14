@@ -1,0 +1,12 @@
+<div class="home-right">
+	<%@candidates.each_with_index do |user,index|%>
+	<%if user != current_candidate%>
+	<ul>
+      <li>
+        <%= link_to user.name, "#", class: "btn btn-success btn-xs start-conversation",
+                    "data-sid" => current_candidate.id, "data-rip" => user.id %>
+      </li>
+    </ul>
+	<%end%>
+	<%end%>
+</div>

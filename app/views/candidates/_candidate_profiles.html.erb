@@ -1,0 +1,33 @@
+<div class="page-heading">
+		<h2>Latest Profiles</h2>
+	</div>
+
+	<div class="profiles-list">
+		<%if @candidates.count > 6%>
+		<div class="profile-pagination">
+			<%= will_paginate @candidates%>
+		</div>
+		<%end%>	
+		<%@candidates.each do |candidate|%>
+		<%if candidate != current_candidate%>
+		<div class="profile">
+			<div class="candi-name">
+				<h3><%= candidate.name%></h3>
+			</div>
+			<div class="candi-image">
+				<%= image_tag(candidate.upload.url)%>
+			</div>
+			<div class="candi-info">
+				<ul>
+					<%if !candidate.date_of_birth.blank?%>
+					<li>D.O.B :<%= candidate.date_of_birth%></li>
+					<%end%>
+					<%if !candidate.age.blank?%>
+					<li>Age :<%= candidate.age%></li>
+					<%end%>
+				</ul>
+			</div>
+		</div>
+		<%end%>
+		<%end%>
+	</div>

@@ -1,0 +1,338 @@
+// Place all the styles related to the Candidates controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.home-container::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.header {
+    padding: 20px;
+    background-color: #EAE5E5;
+}
+.row .logo {
+    float: left;
+    width: 25%;
+}
+.row .site-quote {
+    float: left;
+    width: 50%;
+    text-align: -webkit-center;
+}
+.row .head-login {
+    float: right;
+    width: 25%;
+    text-align: -webkit-center;
+}
+footer{
+    padding: 20px;
+    background-color: #EAE5E5;
+}
+
+.row, .home-container{
+    margin-bottom: 0;
+    padding: 0;
+    width: auto;
+    float: none;
+}
+.align-center {
+    text-align: -webkit-center;
+}
+
+.login-form {
+    border: 1px solid #C7C0C0;
+    display: inline-block;
+    float: none;
+    text-align: left;
+    padding: 0px;
+    margin: 20px;
+}
+.row.align-center > .login-form {
+    margin-left: -15px;
+    margin-right: 15px;
+    width: 30%;
+}
+.main-login {
+    padding: 20px;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+.login-form .main-login {
+    border: none;
+}
+.main-login h2 {
+    line-height: 1.8;
+    padding-top: 0;
+    border-bottom: 1px solid #F0F0F0;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    margin-top: 0;
+    color: #3D5201;
+    text-decoration: underline;
+}
+.form-field {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.form-field label {
+    float: left;
+    width: 100%;
+    padding-bottom: 10px;
+}
+.form-field input {
+    float: left;
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid #7FAFA0;
+}
+.login-submit {
+    text-align: center;
+    width: 100%;
+}
+.login-submit a {
+    float: left;
+    width: 100%;
+}
+.login-submit input {
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.register {
+    float: left;
+    margin: 55px;
+}
+.register p {
+    text-align: -webkit-center;
+}
+.reg-submit {
+    text-align: -webkit-center;
+}
+.personal-info {
+    width: auto;
+    height: 600px;
+}
+input[type="submit"] {
+    font-size: 15px;
+}
+input#candidate_upload {
+    padding-left: 80px;
+    margin-right: -90px;
+}
+
+.home-left {
+    float: left;
+    width: 20%;
+    text-align: center;
+    border: 1px solid #BBC0C5;
+    margin-left: 0px;
+}
+.home-middle {
+    float: left;
+    width: 60%;
+    border-top: 1px solid #BBC0C5;
+}
+.home-right {
+    float: left;
+    width: 20%;
+    padding: 20px;
+    border: 1px solid #BBC0C5;
+}
+.home-left .profile-pic {
+    background: darkseagreen;
+        padding-bottom: 4px;
+}
+
+.profile-pic {
+    text-align: -webkit-center;
+}
+
+.profile-pic img {
+    width: 200px;
+    height: 200px;
+    border: 3px solid darkseagreen;
+    border-radius: 100%;
+    margin-top: -20px;
+}
+
+.profile-pic p {
+    color: aquamarine;
+    font-size: 25px;
+    margin: 0;
+    padding-bottom: 10px;
+    /* border-radius: 198%; */
+    /* border: 1px solid aqua; */
+}
+.profile-pic h2 {
+    margin: 0;
+    color: ghostwhite;
+    border: 2px solid darkseagreen;
+    /* border-radius: 69%; */
+}
+.page-heading {
+    text-align: -webkit-center;
+    padding: 5px;
+}
+.page-heading h2 {
+    color: darkslategrey;
+}
+.profiles-list {
+    margin: 0px 20px;
+    padding: 0;
+    width: auto;
+    float: none;
+}
+.profiles-list::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.profiles-list .profile {
+    float: left;
+    width: 30%;
+    padding-left: 60px;
+}
+
+.candi-image img {
+    height: 200px;
+    width: 225px;
+}
+.candi-name {
+    text-align: -webkit-center;
+    color: chocolate;
+    padding-bottom: 5px;
+}
+.candi-info {
+    padding: 5px;
+}
+
+.candi-info ul>li {
+    padding: 0px 0px 10px 0px;
+}
+.home-middle .search-form {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    background: beige;
+    padding: 22px;
+}
+.search-text input[type=text] {
+    width: 500px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 12px;
+    /* margin-right: -18px; */
+    border: 2px solid lightskyblue;
+    outline: none;
+     border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+.search-text input[type=submit] {
+    border-radius: 10px;
+    font-size: 20px;
+    border: 2px solid lightskyblue;
+    margin-left: -4px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    padding: 1px 15px 2px 15px;
+    background: lightskyblue;
+}
+.about-profile {
+    margin: 25px 0px;
+}
+table {
+    margin-left: 30px;
+}
+
+td {
+float: left;
+    padding: 10px;
+    font-size: 20px;
+    font-style: oblique;
+    color: darkcyan;
+}
+.profile-pagination {
+    padding: 10px;
+    text-align: center;
+}
+.previous_page, .next_page {
+    padding: 25px;
+}
+.pagination {
+    font-size: 20px;
+}
+.current {
+    padding: 0px 20px;
+}
+.image-list img {
+    height: 300px;
+    width: 350px;
+}
+.image-list {
+    max-width: 350px;
+    max-height: 350px;
+    width: auto;
+    height: auto;
+    float: left;
+    margin: 2px;
+    padding: 15px;
+}
+/*body{margin-left: auto;margin-right: auto;width: 1024px;}
+header{text-align: -webkit-center;background: cadetblue;width: 100%;margin: -2px;}
+header h2 {padding: 15px 0px 0px 0px;}
+header h3 {padding: 0px 0px 15px 0px;margin: 0px;}
+footer{background: cadetblue;float: left;width: 100%;margin: -2px;}
+footer p {padding: 2px 0px 0px 50px;}
+.container{margin: -2px;background: #C4F1C4;float: left;width: 100%;}
+.about-me {float: left;padding: 25px;}
+.info{float: left;padding: 10px 15px 25px 10px;}
+div.image img{width: 230px;height: 150px;padding: 25px;display: block;}
+div.show-image img{width: 325px;height: 400px;}
+.show-image{float: left;margin: 10px;}
+.personal-info {padding: 20px;float: left;width: 96%;background: #C4F1C4;margin: 1px;}
+.person-row {float: left;padding: 15px;}
+.person-row h3 {float: left;padding: 0px 10px;}
+.person-row p {float: left;padding: 0px 10px;}
+.family-row {float: left;padding: 15px;}
+.family-row h3 {float: left;padding: 0px 7px;}
+.family-row p {float: left;padding: 0px 7px;}
+.field_with_errors {display: none;}
+//h2{text-shadow: 2px 2px 4px rgba(0, 0, 0, .8);color: white;padding: 5px 25px;background: -webkit-gradient(linear, 100% 
+//50%, 0 50%, color-stop(0.1, #6D8A92), color-stop(0.35, #6D8A92), color-stop(0.45, #6D8A92), color-stop(0.65, #6D8A92), 
+//color-stop(0.88, #3B6370), color-stop(0.93, #245261), color-stop(0.97, #134556), to(#0D4152));}
+ul{list-style-type: none;margin: -2px;;padding: 0px;overflow: hidden;background-color: chocolate;width: 100%;}
+li{float: left;}
+li a{display: block;padding: 20px;text-decoration: none;}
+li.right-nav {float: right;}
+label {text-transform: capitalize;}
+p.submit {padding-left: 46%;}
+p.error-messages {padding: 7px 7px 10px 25px;float: left;text-decoration: underline;color: red;}
+li:hover {background-color: green;}
+th,td {padding: 18px;text-align: center;}*/

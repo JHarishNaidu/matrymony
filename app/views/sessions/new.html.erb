@@ -1,0 +1,22 @@
+<div class="row align-center">
+			<div class="login-form"> 
+				<div class="main-login"> 
+					<h2>Login</h2>
+					<p class= "key"><%= flash[:log] if flash[:log]%></p>
+					<%= form_tag '/login' do %>
+						<div class="form-field"> 
+						  <label>Email</label>  
+						  <%= text_field_tag :email %>
+						</div>
+						<div class="form-field"> 
+							<label>Password </label>
+							<%= password_field_tag :password %>
+						</div>
+						 <div class="login-submit">
+						  <%= submit_tag "Submit" %>
+						  <%= link_to "Create New User ?", candidates_path%>
+						</div>
+					<% end %>
+				</div>
+			</div>
+</div>
